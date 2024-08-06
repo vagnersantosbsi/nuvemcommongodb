@@ -8,7 +8,7 @@
 </template>
 
 <script>
-//import axios from 'axios';
+import axios from 'axios';
 
 export default {
   name: 'HelloWorld',
@@ -23,21 +23,21 @@ export default {
   methods: {
     async pingMongo() {
       try {
-        // const response = await axios.get('http://localhost:3000/connect');
-        // this.responseMessage = response.data;
-        const response = await this.$http.get('http://localhost:3000/connect');
-        this.responseMessage = response.data.message;
+        const response = await axios.get('http://localhost:3000/connect');
+        this.responseMessage = response.data;
+        //const response = await this.$http.get('http://localhost:3000/connect');
+        //this.responseMessage = response.data.message;
 
       } catch (error) {
-        this.responseMessage = 'Error connecting to the backend';
+        this.responseMessage = 'Error connecting to the backend, detalhes:'+ error;
       }
     },
     async created() {
       try {
-        // const response = await axios.get('http://localhost:3000/connect');
-        // this.responseMessage = response.data;
-        const response = await this.$http.get('http://localhost:3000/connect');
-        this.responseMessage = response.data.message;
+        const response = await axios.get('http://localhost:3000/connect');
+        this.responseMessage = response.data;
+        //const response = await this.$http.get('http://localhost:3000/connect');
+        //this.responseMessage = response.data.message;
 
       } catch (error) {
         this.responseMessage = 'Error connecting to the backend';
