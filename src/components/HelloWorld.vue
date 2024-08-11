@@ -25,7 +25,7 @@ export default {
       try {
         const response = await axios.get('http://localhost:3000/connect');
         this.responseMessage = response.data;
-        //const response = await this.$http.get('http://localhost:3000/connect');
+        //const response = await this.$http.get('http://localhost:3000/connectMongoose');
         //this.responseMessage = response.data.message;
 
       } catch (error) {
@@ -34,7 +34,7 @@ export default {
     },
     async created() {
       try {
-        const response = await axios.get('http://localhost:3000/connect');
+        const response = await axios.get('http://localhost:3000/connectMongoose');
         this.responseMessage = response.data;
         //const response = await this.$http.get('http://localhost:3000/connect');
         //this.responseMessage = response.data.message;
